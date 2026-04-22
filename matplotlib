@@ -1,0 +1,133 @@
+Acá tenés la misma información, pero explicada con otras palabras y más simple 👇
+
+---
+
+## 🛠️ Estructuras de datos en **Matplotlib**
+
+Para que los gráficos funcionen correctamente, los datos tienen que tener una forma específica (listas o arrays bien organizados). Acá tenés cómo armar cada tipo:
+
+---
+
+## 📈 1. Gráfico de líneas (`plt.plot`)
+
+👉 Necesitás **dos listas del mismo tamaño**.
+
+* **X** → valores del eje horizontal (tiempo, categorías, etc.)
+* **Y** → valores numéricos
+
+```python
+import matplotlib.pyplot as plt
+
+x = [1, 2, 3, 4, 5]
+y = [10, 15, 7, 12, 9]
+
+plt.plot(x, y, color='blue', marker='o')
+plt.show()
+```
+
+---
+
+## 📊 2. Gráfico de barras (`plt.bar`)
+
+👉 Usás:
+
+* una lista con nombres o categorías
+* otra con los valores
+
+```python
+import matplotlib.pyplot as plt
+
+frutas = ['Manzanas', 'Bananas', 'Cerezas']
+cantidades = [20, 35, 15]
+
+plt.bar(frutas, cantidades, color='orange')
+plt.show()
+```
+
+---
+
+## 🔴 3. Gráfico de dispersión (`plt.scatter`)
+
+👉 Necesitás pares de valores (coordenadas).
+
+Sirve para ver si dos variables están relacionadas.
+
+```python
+import matplotlib.pyplot as plt
+
+altura = [160, 170, 180, 150]
+peso = [55, 72, 85, 48]
+
+plt.scatter(altura, peso, color='red')
+plt.show()
+```
+
+---
+
+## 📉 4. Histograma (`plt.hist`)
+
+👉 Solo necesitás **una lista de datos**.
+
+El gráfico se encarga de agruparlos automáticamente.
+
+```python
+import matplotlib.pyplot as plt
+
+edades = [18, 19, 21, 18, 30, 35, 21, 25, 22, 18]
+
+plt.hist(edades, bins=5, edgecolor='black')
+plt.show()
+```
+
+---
+
+## 📦 5. Diagrama de caja (`plt.boxplot`)
+
+👉 También usa una sola lista.
+
+Permite ver:
+
+* valor central (mediana)
+* dispersión
+* valores raros (outliers)
+
+```python
+import matplotlib.pyplot as plt
+
+salarios = [1200, 1300, 1250, 1400, 1500, 4000]
+
+plt.boxplot(salarios)
+plt.show()
+```
+
+---
+
+## 🥧 6. Gráfico circular (`plt.pie`)
+
+👉 Necesitás:
+
+* una lista con cantidades
+* otra con etiquetas
+
+```python
+import matplotlib.pyplot as plt
+
+votos = [500, 250, 100]
+opciones = ['Opción A', 'Opción B', 'Opción C']
+
+plt.pie(votos, labels=opciones, autopct='%1.1f%%')
+plt.show()
+```
+
+---
+
+## 🧠 Resumen rápido
+
+* **Dos listas** → líneas, dispersión
+* **Categorías + valores** → barras
+* **Una lista** → histograma y boxplot
+* **Valores + etiquetas** → gráfico circular
+
+---
+
+Si querés, después te armo un ejercicio práctico mezclando varios gráficos en uno solo 👍
